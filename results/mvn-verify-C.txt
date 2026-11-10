@@ -28,7 +28,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running mn.edu.must.sqat.ScholarshipCalculatorTest
-[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 s -- in mn.edu.must.sqat.ScholarshipCalculatorTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.101 s -- in mn.edu.must.sqat.ScholarshipCalculatorTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -43,6 +43,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.868 s
-[INFO] Finished at: 2026-11-10T16:11:54+08:00
+[INFO] Total time:  2.818 s
+[INFO] Finished at: 2026-11-10T16:14:44+08:00
 [INFO] ------------------------------------------------------------------------
