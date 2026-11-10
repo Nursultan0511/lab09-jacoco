@@ -66,4 +66,13 @@ class ScholarshipCalculatorTest {
     @Test void scholarship_negativeCredits_throws() {
         assertThrows(IllegalArgumentException.class, () -> calc.scholarship(3.0, -1, false));
     }
+
+    // ---------- Хэсэг C: gpa() давталтын 0 / 1 / 2+ дүрэм ----------
+    // 0 удаа: gpa_empty_throws, gpa_null_throws (Хэсэг B-д бий)
+    @Test void gpa_singleScore_95_is4_0() {                 // 1 удаа
+        assertEquals(4.0, calc.gpa(new double[]{95}), 0.001);
+    }
+    @Test void gpa_fourScores_95_85_75_65_is2_5() {         // 2+ удаа
+        assertEquals(2.5, calc.gpa(new double[]{95, 85, 75, 65}), 0.001);
+    }
 }
