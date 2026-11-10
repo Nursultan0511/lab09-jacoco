@@ -29,3 +29,15 @@ OS name: "linux", version: "6.12.113+deb13-amd64", arch: "amd64", family: "unix"
 5 happy-path тестээр Line хамралт XX%, Branch хамралт XX% гарсан (results/jacoco-A.csv).
 Шар ромбо бүхий мөрүүд нь оролтын шалгалтын `||` нөхцөлүүд (`score < 0 || score > 100`, `scores == null || length == 0`, `gpa < 0 || gpa > 4 || credits < 0`), `hasViolation`, `score >= 70`, `gpa >= 3.8 && credits >= 15` бөгөөд эдгээрт зөвхөн нэг тал нь (хэвийн урсгал) туссан тул салаа хагас хамрагдсан.
 Улаан мөрүүд нь бүх `IllegalArgumentException` throw мөр, сахилгын зөрчилтэй (0%) тохиолдол, letterGrade-ийн D/F, gpa-ийн C/D/default case болон тэтгэлгийн 70%/50%/0 замууд бөгөөд алдааны болон хязгаарын замууд хүрээгүй байна.
+
+## Хэсэг B: 100% хамралт
+
+Branch хамралтыг 100%, Line хамралтыг 100% хүргэхэд нийт 21 тест шаардагдсан
+(results/mvn-verify-B.txt: Tests run: 21). Хэсэг A-аас 16 тест нэмсэн: letterGrade-д
+D, F болон хоёр exception; gpa-д C/D/F (default) case, null ба хоосон массив;
+scholarship-д сахилгын зөрчил, && нөхцөл бүрийн F утга, гурван тусдаа assertThrows.
+results/jacoco-B.csv: BRANCH_MISSED=0, LINE_MISSED=0.
+
+Гэхдээ 100% хамралт нь алдаагүй гэсэн үг биш: letterGrade-ийн `score > 60` нь
+спецификацийн `>= 60`-тай зөрж, 60 оноо "D" биш "F" болж байгаа ч одоогийн тестүүд
+үүнийг барьдаггүй (зааг утгын тест байхгүй).
