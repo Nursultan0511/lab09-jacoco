@@ -26,7 +26,7 @@ OS name: "linux", version: "6.12.113+deb13-amd64", arch: "amd64", family: "unix"
 ```
 ## Хэсэг A: Хамралтын ажиглалт
 
-5 happy-path тестээр Line хамралт XX%, Branch хамралт XX% гарсан (results/jacoco-A.csv).
+5 happy-path тестээр Line хамралт: 60% (15/25), Branch хамралт: 46% (19/41) гарсан (results/jacoco-A.csv).
 Шар ромбо бүхий мөрүүд нь оролтын шалгалтын `||` нөхцөлүүд (`score < 0 || score > 100`, `scores == null || length == 0`, `gpa < 0 || gpa > 4 || credits < 0`), `hasViolation`, `score >= 70`, `gpa >= 3.8 && credits >= 15` бөгөөд эдгээрт зөвхөн нэг тал нь (хэвийн урсгал) туссан тул салаа хагас хамрагдсан.
 Улаан мөрүүд нь бүх `IllegalArgumentException` throw мөр, сахилгын зөрчилтэй (0%) тохиолдол, letterGrade-ийн D/F, gpa-ийн C/D/default case болон тэтгэлгийн 70%/50%/0 замууд бөгөөд алдааны болон хязгаарын замууд хүрээгүй байна.
 
